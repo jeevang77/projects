@@ -1,25 +1,13 @@
-# 🕷️ Spidey Voice Assistant
+
+#  Spidey Voice Assistant
 
 Spidey is a Python-based voice assistant that listens to your voice commands and performs tasks like web searches, YouTube queries, location lookups, checking stock prices, and more — all through natural conversation.
 
 ---
 
-## 🧠 Features
+##  Features
 
-- 🔍 Google search from your voice input  
-- 📺 YouTube search and play  
-- 🗺️ Location lookup on Google Maps  
-- 📈 Stock price checker (e.g., Apple, Tesla, Bitcoin) using [Yahoo Finance](https://pypi.org/project/yfinance/)  
-- 🕒 Time announcements  
-# 🕷️ Spidey Voice Assistant
-
-Spidey is a Python-based voice assistant that listens to your voice commands and performs tasks like web searches, YouTube queries, location lookups, checking stock prices, and more — all through natural conversation.
-
----
-
-## 🧠 Features
-
-- 🔍 Google search from your voice input  
+-  Google search from your voice input  
 - 📺 YouTube search and play  
 - 🗺️ Location lookup on Google Maps  
 - 📈 Stock price checker using [Yahoo Finance](https://pypi.org/project/yfinance/)  
@@ -29,7 +17,7 @@ Spidey is a Python-based voice assistant that listens to your voice commands and
 
 ---
 
-## 🚀 How It Works
+##  How It Works
 
 1. Captures voice input using your microphone.
 2. Converts it to text using Google's Speech Recognition API.
@@ -38,9 +26,9 @@ Spidey is a Python-based voice assistant that listens to your voice commands and
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
-### ✅ Step 1: Create and Activate a Virtual Environment (Recommended)
+###  Step 1: Create and Activate a Virtual Environment (Recommended)
 
 ```bash
 # Windows
@@ -52,7 +40,7 @@ python3 -m venv myenv
 source myenv/bin/activate
 ```
 
-### ✅ Step 2: Install Required Packages
+###  Step 2: Install Required Packages
 
 #### Option A: Automatic Installation
 
@@ -79,11 +67,23 @@ pip install pipwin
 pipwin install pyaudio
 ```
 
-> 💡 On macOS: Install PortAudio first with `brew install portaudio` then try `pip install pyaudio`.
+>  On macOS: Install PortAudio first with `brew install portaudio` then try `pip install pyaudio`.
 
 ---
 
-## 📦 Libraries Used
+##  How to Run
+
+Run the assistant using the command:
+
+```bash
+python assistant.py
+```
+
+Make sure your mic is working and you're connected to the internet.
+
+---
+
+##  Libraries Used
 
 | Library           | Purpose                            |
 |------------------|-------------------------------------|
@@ -96,7 +96,7 @@ pipwin install pyaudio
 
 ---
 
-## 🎤 Example Voice Commands
+##  Example Voice Commands
 
 | Action           | Say This...                                      |
 |------------------|--------------------------------------------------|
@@ -110,27 +110,7 @@ pipwin install pyaudio
 
 ---
 
-## ▶️ How to Run
-
-Run the assistant using the command:
-
-```bash
-python assistant.py
-```
-
-Make sure your mic is working and you're connected to the internet.
-
----
-
-## ⚠️ Troubleshooting
-
-- **Microphone not detected?** Make sure `pyaudio` is installed properly and microphone permissions are granted.
-- **Speech not recognized?** Speak clearly, slowly, and in English.
-- **Audio output not playing?** Ensure `playsound` works and you have media player support installed.
-
----
-
-## 🔮 Future Plans
+##  Future Plans
 
 - Add GPT-style conversational abilities.
 - Integrate weather, reminders, and calendar access.
@@ -139,24 +119,7 @@ Make sure your mic is working and you're connected to the internet.
 
 ---
 
-## 👨‍💻 Author
-
-Developed by [Your Name]  
-Inspired by Iron Man — built for Spidey lovers 🕸️  
-For educational and experimental use only.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** — use it freely, modify it as you like, and build cool stuff!
-
-- 🗣️ Basic conversation (greeting, name memory)  
-- 👋 Exit on friendly phrases like "bye", "see you", etc.
-
----
-
-## 🚀 How It Works
+##  How It Works
 
 1. Uses the `speech_recognition` library to capture and convert voice to text.
 2. Matches input with predefined keyword sets to determine the user’s intent.
@@ -164,7 +127,7 @@ This project is licensed under the **MIT License** — use it freely, modify it 
 
 ---
 
-## 🛠️ Installation
+##  Installation
 
 # Create virtual environment
 python -m venv myenv

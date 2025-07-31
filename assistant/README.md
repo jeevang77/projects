@@ -1,68 +1,174 @@
-\# Spidey Assistant
+# 🕷️ Spidey Voice Assistant
 
+Spidey is a Python-based voice assistant that listens to your voice commands and performs tasks like web searches, YouTube queries, location lookups, checking stock prices, and more — all through natural conversation.
 
+---
 
-Spidey Assistant is a voice-controlled personal assistant designed to help you with various tasks using natural language commands. It can perform web searches, YouTube video lookups, find locations on maps, provide stock prices, and tell you the current time.
+## 🧠 Features
 
+- 🔍 Google search from your voice input  
+- 📺 YouTube search and play  
+- 🗺️ Location lookup on Google Maps  
+- 📈 Stock price checker (e.g., Apple, Tesla, Bitcoin) using [Yahoo Finance](https://pypi.org/project/yfinance/)  
+- 🕒 Time announcements  
+# 🕷️ Spidey Voice Assistant
 
+Spidey is a Python-based voice assistant that listens to your voice commands and performs tasks like web searches, YouTube queries, location lookups, checking stock prices, and more — all through natural conversation.
 
-\## Features
+---
 
+## 🧠 Features
 
+- 🔍 Google search from your voice input  
+- 📺 YouTube search and play  
+- 🗺️ Location lookup on Google Maps  
+- 📈 Stock price checker using [Yahoo Finance](https://pypi.org/project/yfinance/)  
+- 🕒 Time announcements  
+- 🗣️ Basic conversation and name memory  
+- 👋 Friendly exit commands like "bye", "see you", etc.
 
-\* \*\*Voice Recognition:\*\* Understands spoken commands.
+---
 
-\* \*\*Web Search:\*\* Searches for information on Google.
+## 🚀 How It Works
 
-\* \*\*Youtube:\*\* Plays videos directly from YouTube.
+1. Captures voice input using your microphone.
+2. Converts it to text using Google's Speech Recognition API.
+3. Detects intent using keywords.
+4. Executes relevant actions using Python tools and APIs.
 
-\* \*\*Map Search:\*\* Finds locations on Google Maps.
+---
 
-\* \*\*Stock Prices:\*\* Retrieves current stock prices for predefined companies/cryptocurrencies.
+## 🛠️ Setup Instructions
 
-\* \*\*Basic Conversation:\*\* Responds to greetings, tells its name, and remembers your name.
-
-\* \*\*Time Inquiry:\*\* Provides the current time.
-
-
-
-\## Requirements
-
-
-
-To run Spidey Assistant, you'll need Python 3 installed on your system. Additionally, the following Python libraries are required:
-
-
-
-\* `SpeechRecognition`
-
-\* `gTTS` (Google Text-to-Speech)
-
-\* `playsound`
-
-\* `yfinance`
-
-
-
-\## Installation
-
-
-
-Follow these steps to set up and run Spidey Assistant:
-
-
-
-\### 1. Clone the Repository (if you haven't already)
-
-
-
-If you're reading this README on GitHub, you'll want to clone the repository to your local machine:
-
-
+### ✅ Step 1: Create and Activate a Virtual Environment (Recommended)
 
 ```bash
+# Windows
+python -m venv myenv
+myenv\Scripts\activate
 
-git clone \[https://github.com/jeevang77/projects.git](https://github.com/jeevang77/projects.git)
+# macOS/Linux
+python3 -m venv myenv
+source myenv/bin/activate
+```
 
-cd projects/assistant
+### ✅ Step 2: Install Required Packages
 
+#### Option A: Automatic Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Option B: Manual Installation
+
+Use this if `requirements.txt` doesn't work:
+
+```bash
+pip install SpeechRecognition
+pip install gTTS
+pip install playsound
+pip install yfinance
+pip install pyaudio
+```
+
+If you face issues with `pyaudio` (especially on Windows):
+
+```bash
+pip install pipwin
+pipwin install pyaudio
+```
+
+> 💡 On macOS: Install PortAudio first with `brew install portaudio` then try `pip install pyaudio`.
+
+---
+
+## 📦 Libraries Used
+
+| Library           | Purpose                            |
+|------------------|-------------------------------------|
+| `SpeechRecognition` | Capture voice input               |
+| `gTTS`            | Text-to-speech (Google TTS)        |
+| `playsound`       | Play spoken output audio           |
+| `webbrowser`      | Open browser tabs                  |
+| `yfinance`        | Fetch live stock prices            |
+| `pyaudio`         | Enable microphone functionality    |
+
+---
+
+## 🎤 Example Voice Commands
+
+| Action           | Say This...                                      |
+|------------------|--------------------------------------------------|
+| Google Search    | "Search for quantum computing"                   |
+| YouTube Video    | "Play Spider-Man trailer on YouTube"             |
+| Location Map     | "Where is the Eiffel Tower"                      |
+| Stock Price      | "Tell me the stock price of Tesla"              |
+| Ask Time         | "What's the time now?"                          |
+| Set Name         | "My name is Peter"                              |
+| Exit             | "Bye", "See you later", "Quit"                  |
+
+---
+
+## ▶️ How to Run
+
+Run the assistant using the command:
+
+```bash
+python assistant.py
+```
+
+Make sure your mic is working and you're connected to the internet.
+
+---
+
+## ⚠️ Troubleshooting
+
+- **Microphone not detected?** Make sure `pyaudio` is installed properly and microphone permissions are granted.
+- **Speech not recognized?** Speak clearly, slowly, and in English.
+- **Audio output not playing?** Ensure `playsound` works and you have media player support installed.
+
+---
+
+## 🔮 Future Plans
+
+- Add GPT-style conversational abilities.
+- Integrate weather, reminders, and calendar access.
+- Build a GUI using Tkinter or PyQt.
+- Expand stock market coverage dynamically.
+
+---
+
+## 👨‍💻 Author
+
+Developed by [Your Name]  
+Inspired by Iron Man — built for Spidey lovers 🕸️  
+For educational and experimental use only.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — use it freely, modify it as you like, and build cool stuff!
+
+- 🗣️ Basic conversation (greeting, name memory)  
+- 👋 Exit on friendly phrases like "bye", "see you", etc.
+
+---
+
+## 🚀 How It Works
+
+1. Uses the `speech_recognition` library to capture and convert voice to text.
+2. Matches input with predefined keyword sets to determine the user’s intent.
+3. Executes corresponding actions using `webbrowser`, `yfinance`, and text-to-speech via `gTTS`.
+
+---
+
+## 🛠️ Installation
+
+# Create virtual environment
+python -m venv myenv
+source myenv/bin/activate  # On Windows: myenv\Scripts\activate
+
+# Install required packages
+pip install -r requirements.txt
